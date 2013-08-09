@@ -338,6 +338,14 @@ def check_formals(formals):
     >>> check_formals(read_line("(a b c)"))
     """
     "*** YOUR CODE HERE ***"
+    formals_list  = []
+    for arg in formals:
+        if arg in formals_list:
+            raise SchemeError
+        formal_list.append(arg)
+
+    if not scheme_symbolp(formals):
+        raise SchemeError
 
 ##################
 # Tail Recursion #
